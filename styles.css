@@ -1,0 +1,63 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#7dd3fc;
+  --muted:#94a3b8;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  background:linear-gradient(180deg,#071025 0%, #0b1220 100%);
+  color:#e6eef8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px;
+}
+.card{
+  max-width:560px;
+  width:100%;
+  background:rgba(255,255,255,0.02);
+  padding:36px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 6px 30px rgba(2,6,23,0.6);
+}
+
+/* Avatar / profile image */
+.avatar{
+  width:clamp(72px,18vw,140px);
+  height:clamp(72px,18vw,140px);
+  margin:0 auto 14px;
+  border-radius:50%;
+  overflow:hidden;
+  background:linear-gradient(135deg,#18324a,#0b1220);
+  display:block;
+  border:3px solid rgba(255,255,255,0.04);
+}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+h1{margin:0;font-size:2.1rem}
+.pronouns{color:var(--muted);margin:6px 0 14px}
+.roles{line-height:1.4;color:#dceefb}
+.roles a{color:var(--accent);text-decoration:none}
+.links{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.links{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.btn{display:inline-block;padding:8px 12px;background:rgba(255,255,255,0.03);color:inherit;border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,0.03)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,0.4)}
+
+/* Social icon bar */
+.socials{margin-top:18px;display:flex;gap:14px;justify-content:center;align-items:center}
+.social{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:8px;background:transparent;color:rgba(255,255,255,0.92);text-decoration:none;border:1px solid rgba(255,255,255,0.04)}
+.social svg{width:20px;height:20px;fill:currentColor}
+.social:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(2,6,23,0.45)}
+.small{margin-top:18px;color:var(--muted);font-size:.9rem}
+
+/* Responsive tweaks */
+@media (max-width:420px){
+  .card{padding:20px}
+  h1{font-size:1.6rem}
+  .roles{font-size:.95rem}
+}
+
