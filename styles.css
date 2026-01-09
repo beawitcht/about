@@ -17,44 +17,42 @@ body{
   padding:40px;
 }
 .card{
-  max-width:560px;
-  width:100%;
+  max-width:840px;
+  width:clamp(280px,60vw,840px);
   background:rgba(255,255,255,0.02);
-  padding:36px;
+  padding:clamp(20px,3.5vw,54px);
   border-radius:12px;
   text-align:center;
   box-shadow:0 6px 30px rgba(2,6,23,0.6);
 }
 
-/* Avatar / profile image */
 .avatar{
-  width:clamp(72px,18vw,140px);
-  height:clamp(72px,18vw,140px);
-  margin:0 auto 14px;
+  width:clamp(108px,20vw,210px);
+  height:clamp(108px,20vw,210px);
+  margin:0 auto 18px;
   border-radius:50%;
   overflow:hidden;
   background:linear-gradient(135deg,#18324a,#0b1220);
   display:block;
-  border:3px solid rgba(255,255,255,0.04);
+  border:clamp(2px,0.4vw,4px) solid rgba(255,255,255,0.04);
 }
 .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-h1{margin:0;font-size:2.1rem}
+.h1{margin:0}
+h1{margin:0;font-size:clamp(1.6rem,3.5vw,2.6rem)}
 .pronouns{color:var(--muted);margin:6px 0 14px}
-.roles{line-height:1.4;color:#dceefb}
+.roles{line-height:1.4;color:#dceefb;font-size:clamp(.95rem,1.2vw,1.1rem)}
 .roles a{color:var(--accent);text-decoration:none}
 .links{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 .links{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-.btn{display:inline-block;padding:8px 12px;background:rgba(255,255,255,0.03);color:inherit;border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,0.03)}
+.btn{display:inline-block;padding:clamp(8px,1.6vw,14px) clamp(12px,2.6vw,20px);background:rgba(255,255,255,0.03);color:inherit;border-radius:10px;text-decoration:none;border:1px solid rgba(255,255,255,0.03)}
 .btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,0.4)}
 
-/* Social icon bar */
-.socials{margin-top:18px;display:flex;gap:14px;justify-content:center;align-items:center}
-.social{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:8px;background:transparent;color:rgba(255,255,255,0.92);text-decoration:none;border:1px solid rgba(255,255,255,0.04)}
-.social svg{width:20px;height:20px;fill:currentColor}
+.socials{margin-top:20px;display:flex;gap:clamp(12px,2.8vw,22px);justify-content:center;align-items:center}
+.social{display:inline-grid;place-items:center;width:clamp(40px,6.5vw,60px);height:clamp(40px,6.5vw,60px);border-radius:10px;background:transparent;color:rgba(255,255,255,0.92);text-decoration:none;border:1px solid rgba(255,255,255,0.04)}
+.social svg{width:clamp(18px,3.2vw,30px);height:clamp(18px,3.2vw,30px);fill:currentColor}
 .social:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(2,6,23,0.45)}
-.small{margin-top:18px;color:var(--muted);font-size:.9rem}
+.small{margin-top:18px;color:var(--muted);font-size:clamp(.85rem,1.2vw,1rem)}
 
-/* Responsive tweaks */
 @media (max-width:420px){
   .card{padding:20px}
   h1{font-size:1.6rem}
