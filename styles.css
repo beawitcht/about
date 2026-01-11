@@ -221,6 +221,13 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.03)
 }
 
+
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 @media (max-width:420px) {
   .card {
     padding: 16px
